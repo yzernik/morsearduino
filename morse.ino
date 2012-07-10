@@ -82,7 +82,6 @@ void encode_string(const char *s)
          }
       }
    }
-   putchar('\n');
 }
 
 // the setup routine runs once when you press reset:
