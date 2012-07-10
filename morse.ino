@@ -66,7 +66,7 @@ void encode_letter(const char *c)
      }
 }
 
-void encode_led(const char *s)
+void encode_string(const char *s)
 {
    size_t i, j;
    for ( i = 0; s[i]; ++i )
@@ -89,14 +89,13 @@ void encode_led(const char *s)
 void setup() {                
   // initialize the digital pin as an output.
   Serial.begin(9600);           // set up Serial library at 9600 bps
-  Serial.println("Hello world");
   pinMode(led, OUTPUT);     
 }
 
 // the loop routine runs over and over again forever:
 void loop() {
   const char text[] = "Hello, Arduino";
-  encode_led(text);
+  encode_string(text);
   delay(2000);
 }
 
